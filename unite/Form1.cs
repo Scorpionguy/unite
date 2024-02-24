@@ -24,16 +24,16 @@ namespace unite
             dataGridView1.AutoSizeColumnsMode = DataGridViewAutoSizeColumnsMode.Fill;
             dataGridView1.Size = new System.Drawing.Size(Width - 210, Height - 155);
             button5.Location = new System.Drawing.Point(dataGridView1.Location.X, dataGridView1.Location.Y + dataGridView1.Height + 5);
-            //textBox1.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox2.Location = new System.Drawing.Point(dataGridView1.Location.X + button1.Size.Width + 70, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox3.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox4.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox5.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox6.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox7.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox8.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox9.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
-            //textBox10.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox1.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox2.Location = new System.Drawing.Point(dataGridView1.Location.X + button1.Size.Width + 70, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox3.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox4.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox5.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox6.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox7.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox8.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox9.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
+            textBox10.Location = new System.Drawing.Point(dataGridView1.Location.X + 140, dataGridView1.Location.Y + dataGridView1.Height + 20);
         }
 
         private void Form1_Resize(object sender, EventArgs e)
@@ -114,7 +114,7 @@ namespace unite
         {
             using (NpgsqlConnection connection = new NpgsqlConnection(connectionStr))
             {
-                string query1 = $"insert into publications(name, category, date_published, isbn) values ('{textBox1.Text}', '{textBox2.Text}', '{maskedTextBox1.Text}', {textBox4.Text})";
+                string query1 = $"insert into publications(name, category, date_published, isbn) values ('{textBox1.Text}', '{textBox2.Text}', '{maskedTextBox1.Text}', '{textBox4.Text}')";
                 NpgsqlCommand select = new NpgsqlCommand(query1, connection);
                 connection.Open();
                 NpgsqlDataAdapter adapter = new NpgsqlDataAdapter(select);
